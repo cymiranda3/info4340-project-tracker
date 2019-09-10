@@ -1,0 +1,535 @@
+body {
+    margin: 0;
+}
+
+#app {
+    margin-top: 0 !important;
+}
+
+ul {
+    margin: 0 !important;
+}
+
+@font-face {
+    font-family: Metropolis;
+    src: url(fonts/metropolis-medium-webfont.woff);
+}
+@font-face {
+    font-family: Metropolis;
+    font-weight: bold;
+    src: url(fonts/metropolis-semibold-webfont.woff)
+}
+@font-face {
+    font-family: Metropolis;
+    font-weight: 800;
+    src: url(fonts/metropolis-extrabold-webfont.woff);
+}
+/********************* Add New Project  ********************/
+
+#measure::after {
+    content:"";
+    background-image: url('../assets/chevron.svg');
+    position: absolute;
+}
+
+.add-container {
+    width: 100vw;
+    height: 100vh;
+    /* background: #318AFB; */
+    background: #fff;
+}
+
+nav {
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 35px 0;
+    color: black;
+    border-bottom: .2px solid black ;
+}
+
+.add-form-container {
+    text-align: left;
+    padding: 36px;
+    color: black;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+nav p {
+    margin: 0;
+    /* color:ff; */
+}
+
+.white {
+    color: white;
+}
+
+
+#back {
+    position: absolute;
+    left: 36px;
+}
+
+#back:focus{
+    opacity: .3;
+}
+
+#plus:focus{
+    opacity: .3;
+}
+
+#back img {
+    height: 19px;
+}
+
+nav p {
+    display: inline-block;
+    /* color: black; */
+}
+
+#plus {
+    position: absolute;
+    right: 36px;
+}
+
+.add-label {
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.input-row {
+    margin-bottom: 40px;
+}
+
+.add-input {
+    border-radius: 9px;
+    box-shadow: 0 1px 15px 0 rgba(179, 179, 179, .50);
+    margin-top: 10px;
+}
+.add-input:focus {
+    background: #f7f7f7;
+}
+
+.add-input input {
+    font-size: 17px;
+    padding: 0 8px;
+    width: 100%;
+    height: 55px;
+    border: none;
+    background: transparent;
+    transition: all .15s ease-in-out;
+    color: black;
+    font-family: 'Metropolis', 'Avenir', sans-serif;
+}
+
+.add-input input:focus {
+    background: #f7f7f7;
+    border: none;
+    border-bottom: 1.5px solid #e8e8e8;
+    outline: none;
+    border-radius: 4px 4px 0 0;
+    color: black;
+}
+
+.add-input textarea {
+    width: 100%;
+    height: 90px;
+    border: none;
+    background: transparent;
+    padding: 8px;
+    font-size: 17px;
+    line-height: 22px;
+    color: black;
+    font-family: 'Metropolis', 'Avenir', sans-serif;
+}
+
+.add-input textarea:focus {
+    background: #f7f7f7;
+    outline: none;
+    border-radius: 9px;
+    border-radius: 4px 4px 0 0;
+    color: black;
+
+}
+
+.add-input select {
+    font-size: 17px;
+    width: 100%;
+    border: none;
+    color: black;
+    padding: 8px;
+    height: 55px;
+    background: transparent;
+}
+
+.add-input select:focus {
+    outline: none;
+}
+
+#label_desc {
+    vertical-align: top;
+}
+
+.btn-submit {
+    bottom: 20px;
+    width: 100%;
+    opacity: .6;
+    margin: auto;
+    font-weight: 500;
+    background: #ededed;
+    color: white;
+    height: 55px;
+    border-radius: 12px;
+    border: none;
+    font-size: 16px;
+    font-family: 'Metropolis', 'Avenir', sans-serif;
+    box-shadow: none;
+    transition: all .15s ease-in-out;
+}
+.btn-submit:focus {
+    outline: none;
+}
+.btn-submit:active {
+
+    opacity: .8;
+}
+
+.incomplete-field {
+    background: rgba(255, 255, 255, .7) !important;
+    border-radius: 4px 4px 0 0;
+    border-bottom: 1px solid #FD353B !important;
+}
+
+.visible {
+    visibility: visible !important;
+    display: block !important;
+}
+
+.pop-modal {
+    visibility: hidden;
+    display: none;
+    width: 270px;
+    height: 210px;
+    background: #fff;
+    border-radius: 6px;
+    position: relative;
+    bottom: 33%;
+    margin: auto;
+    box-shadow: 0 9px 20px 400px rgba(0, 0, 0, .55);
+    padding: 24px;
+}
+
+.pop-modal h1 {
+    font-size: 18px;
+    text-align: left;
+    font-weight: 500;
+    font-family: 'Metropolis', 'Avenir', sans-serif;
+    margin: 0;
+}
+
+#new-measure-form {
+    margin-top: 30px;
+}
+
+.pop-modal input {
+    border: none;
+    outline: none;
+    width: 94%;
+    border-bottom: 2px solid black;
+    height: 40px;
+    font-size: 18px;
+    padding: 0 4%;
+}
+
+.pop-modal input:focus {
+    background: rgba(49, 138, 251, .1);
+    border-radius: 6px 6px 0 0;
+}
+
+
+.button-row {
+    position: relative;
+    bottom: -40px;
+    float: right;
+    color: black;
+}
+.btn {
+    font-family: 'Proxima Nova', 'Metropolis', 'Avenir', sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: black;
+    margin: 0 5px;
+}
+
+/********************* Add New Entry  ********************/
+
+.project-container {
+    text-align: left;
+    padding: 36px;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    padding-bottom: 0px;
+}
+.project-title-container {
+    background: #fff;
+    margin: auto;
+    width: 100%;
+    color: #318AFB;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.smile {
+    display: inline-block;
+    width: 35%;
+}
+
+.project-info {
+    display: inline-block;
+    width: 60%;
+    vertical-align: top;
+}
+
+.project-info-name {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 23px;
+    margin-top: 3px;
+}
+
+.project-info-average {
+    margin-top: 13px;
+    font-size: 14px;
+    line-height: 17px;
+
+}
+
+
+
+
+/********************* Home Screen ********************/
+
+.home nav{
+    border-bottom: 0px solid #fff !important;
+}
+nav .home p{
+    color:black !important;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 40px 0;
+}
+
+.projects {
+    width: 86%;
+    margin: auto;
+}
+
+.add-button-btn {
+    height: 130px;
+    width: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    font-family: 'Metropolis', 'Avenir', sans-serif;
+    transition: all .1s ease-in-out;
+}
+
+/************** Project Details Screen ****************/
+.home nav{
+    border-bottom: 0px solid #fff !important;
+}
+.list-cal-container {
+    width: 100%;
+}
+.toggle {
+    text-transform: uppercase;
+    padding: 15px;
+    width: 50%;
+    display: inline-block;
+    border-bottom: 1px solid #D9D9D9;
+    text-align: center;
+    color: #909090;
+}
+.highlighted-toggle {
+    border-bottom: 2px solid black;
+    font-weight: 500;
+    color: black;
+}
+
+
+
+
+/*********** Responsive *************/
+
+
+
+/**  Iphone 5 **/
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px)
+and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71) and (orientation:portrait)
+{
+
+    div.dropdown-item{
+    padding: 0;
+    }
+
+    div.datepicker {
+        font-size: 0.675rem;
+    }
+    /**iphone phone changes **/
+
+    .dropdown-content {
+        left: 104px !important;
+    }
+
+}
+
+/** iPhone 8 **/
+@media only screen
+    and (device-width : 375px)
+    and (device-height : 667px)
+    and (-webkit-device-pixel-ratio : 2) {
+        .dropdown-content {
+            left: 154px !important;
+        }
+        .project-details-container .entries {
+            height: 235px !important;
+        }
+
+    }
+
+/*
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px)
+and (orientation : portrait) {
+
+
+
+} */
+
+/** iPhone 8 Plus **/
+@media only screen
+    and (device-width : 414px)
+    and (device-height : 736px)
+    and (-webkit-device-pixel-ratio : 3) {
+
+        .dropdown-content {
+            left: 195px !important;
+        }
+        .add-button-btn {
+            height: 140px;
+            width: 140px;
+        }
+        .add-button {
+            height: 140px !important;
+            width: 140px !important;
+        }
+        .input-row {
+            margin-bottom: 25px;
+        }
+        .btn-submit {
+            width: 83% !important;
+        }
+        .project-details-container .entries {
+            height: 295px !important;
+        }
+
+    }
+
+
+/*
+@media only screen
+and (min-device-width : 414px)
+and (max-device-width : 736px)
+and (orientation : portrait) {
+    .dropdown-content {
+        left: 195px !important;
+    }
+    .add-button-btn {
+        height: 140px;
+        width: 140px;
+    }
+    .add-button {
+        height: 140px !important;
+        width: 140px !important;
+    }
+    .input-row {
+        margin-bottom: 25px;
+    }
+    .btn-submit {
+        width: 83% !important;
+    }
+    .project-details-container .entries {
+        height: 295px !important;
+    }
+ } */
+
+/*
+ @media only screen
+ and (min-device-width : 320px)
+ and (max-device-width : 568px) {
+    .project-details-container .entries {
+        height: 160px !important;
+    }
+ }
+
+ @media only screen and (min-width: 411px) and (max-width: 731px) {
+    .project-details-container .entries {
+        height: 360px !important;
+    }
+ } */
+
+
+
+ /**  Iphone 5 **/
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px)
+and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71) and (orientation:portrait)
+{
+    .add-button-btn {
+        height: 100px;
+        width: 100px;
+    }
+    .add-button {
+        height: 100px !important;
+        width: 100px !important;
+        border-radius: 25% !important;
+    }
+
+    button#btn-submit.btn-submit {
+      position: static;
+    }
+
+div.dropdown-item{
+  padding: 0;
+}
+
+div.datepicker {
+    font-size: 0.675rem;
+}
+/**iphone phone changes **/
+
+.dropdown-content {
+    left: 104px !important;
+}
+
+/* ----------- Google Pixel ----------- */
+
+@media only screen
+  and (device-width: 412px)
+  and (device-height: 823px)
+  and (-webkit-device-pixel-ratio: 3.5)
+  and (orientation: portrait) {
+    div#calendar-container {
+    width: 74% !important;
+}
+}
+}

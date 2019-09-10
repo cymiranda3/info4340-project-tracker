@@ -1,0 +1,43 @@
+{
+   "project0": {
+        "name": "Guitar",
+        "projectID": 0,
+        "description": "blah blah blah",
+        "measure": "miles",
+        "entries" : [
+            {
+                "entryID": "entry0",
+                "date": "10/12/18",
+                "notes":"notes notes notes notes",
+                "value":"18"
+            },
+            {
+                "entryID": "entry1",
+                "date": "10/14/18",
+                "notes":"notes notes notes more notes",
+                "value":"2"
+            }
+        ]
+    },
+
+    "project1": {
+        "name": "Smoking",
+        "projectID": 1,
+        "description": "blah blah blah",
+        "measure": "miles",
+        "entries" : [
+            {
+                "entryID": "entry0",
+                "date": "1/1/18",
+                "notes":"notes notes notes notes",
+                "value":"3"
+            },
+            {
+                "entryID": "entry1",
+                "date": "10/19/18",
+                "notes":"notes notes notes more notes",
+                "value":"5"
+            }
+        ]
+    }
+}
